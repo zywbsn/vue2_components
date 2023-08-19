@@ -1,3 +1,8 @@
+# vue2 + element 通用组件
+
+### git test
+
+
 # vue2_components
 
 ## Project setup
@@ -20,4 +25,3 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-# vue2 + element 通用组件
