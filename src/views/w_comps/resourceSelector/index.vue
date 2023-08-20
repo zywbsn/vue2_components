@@ -1,11 +1,6 @@
 <template>
   <div>
-    <div class="bg-pink-500" style="height: 100vh;width: 100%;">
-      resourceSelector
-      resourceSelector
-      resourceSelector
-      resourceSelector
-    </div>
+    resourceSelector
   </div>
 </template>
 
@@ -15,6 +10,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
