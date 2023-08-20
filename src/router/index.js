@@ -1,26 +1,65 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: '/',
+    redirect: '/layouts'
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/layouts',
+    name: 'layouts',
+    component: () => import("@/layouts/index.vue"),
+    meta: {
+      isShow: false
+    }
+  },
+  {
+    path: "/home",
+    name: "name",
+    component: () => import("@/views/home/index.vue"),
+    meta: {
+      isShow: true,
+      title: "首页"
+    }
+  },
+  {
+    path: "/w_comps",
+    name: "w_comps",
+    meta: {
+      isShow: true,
+      title: "w_comps"
+    },
+    component: () => import("@/views/w_comps/index.vue"),
+    children: [
+      {
+        path: "resource_selector",
+        name: "resource_selector",
+        meta: {
+          isShow: true,
+          title: "资源选择器"
+        },
+        component: () => import("@/views/w_comps/resourceSelector/index.vue")
+      },
+      {
+        path: "resource_selector1",
+        name: "resource_selector1",
+        meta: {
+          isShow: true,
+          title: "资源选择器1"
+        },
+        component: () => import("@/views/w_comps/resourceSelector1/index.vue")
+      },
+    ]
   }
 ]
 
+
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 
