@@ -17,9 +17,12 @@ vue2 + element + tailwindcss
 **index.js**
 
 1. `toRgb` 十六进制颜色转 rgb 或 rgba
-2. 
+2.
 
 ---
 
+**mseeage.js**
 
+> 解决了连续点击造成滚屏的效果，但是不支持 `this.$message.success("success");` 类写法
 
+---
