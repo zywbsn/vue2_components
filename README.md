@@ -1,27 +1,25 @@
 # vue2 + element 通用组件
 
-### git test
+---
 
+vue2 + element + tailwindcss
 
-# vue2_components
+---
 
-## Project setup
-```
-npm install
-```
+### directive 存放自定义指令
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+`antishake.js` 全局防抖全局自定义指令
 
-### Compiles and minifies for production
-```
-npm run build
-```
+---
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### utils 存放公用函数
+
+**index.js**
+
+1. `toRgb` 十六进制颜色转 rgb 或 rgba
+2. 
+
+---
 
 
 

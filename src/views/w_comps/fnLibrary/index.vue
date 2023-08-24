@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-      <div class="p-4 rounded border text-center">
+      <div class="p-4 rounded border text-center bg-red-200">
         <h3 class="mb-2">十六进制颜色转 rgb 或 rgba</h3>
         <el-input v-model="color.color" placeholder="请输入十六进制颜色"></el-input>
         <div class="mb-2">颜色格式 #fff 或者 #ffffff</div>
