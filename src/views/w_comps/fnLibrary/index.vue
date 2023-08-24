@@ -13,7 +13,7 @@
         <h3 class="mb-2">自定义指令 - 防抖</h3>
         <!-- <div class="mb-2">鼠标点击次数：{{ sub.handleCount }}</div> -->
         <div class="mb-2">submitForm 执行次数：{{ sub.submitFormCount }}</div>
-        <el-button @click="submitForm" v-antiShake type="primary" size="mini">submit</el-button>
+        <el-button v-antiShake @click="submitForm" type="primary" size="mini">submit</el-button>
       </div>
       <div class="p-4 rounded border text-center">
         item

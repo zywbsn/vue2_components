@@ -9,7 +9,9 @@ import { message } from "@/utils/message";
 
 Vue.use(ElementUI);
 Vue.use(antiShake); //使用防抖自定义指令
-Vue.prototype.$msg = message; //Vue.prototype.$message = message; 代替 element el-message 不支持 this.$message.success 写法
+
+//Vue.prototype.$message = message; 代替 element el-message 不支持 this.$message.success 写法
+Vue.prototype.$msg = message;
 
 Vue.config.productionTip = false;
 

@@ -10,7 +10,7 @@ export default () => {
         setTimeout(() => {
           el.disabled = false;
           el.classList.remove("is-disabled");
-        }, binding || 2000); //默认 2000ms
+        }, binding.value || 2000); //默认 2000ms
       });
     },
   });
