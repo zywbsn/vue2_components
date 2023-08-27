@@ -26,3 +26,10 @@ vue2 + element + tailwindcss
 > 解决了连续点击造成滚屏的效果，但是不支持 `this.$message.success("success");` 类写法
 
 ---
+
+### /views/animations
+
+css 动画
+
+1. 单行导航条
+2. 多行导航条
