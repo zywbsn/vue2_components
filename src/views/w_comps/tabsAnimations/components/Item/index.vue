@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <li ref="liRef" class="cursor-pointer p-4 rounded border text-center bg-pink-100 hover:border-gray-800"
-      @mouseenter="mouserOver">item {{ item
-      }}</li>
-  </div>
+  <li ref="liRef" class="cursor-pointer rounded-lg w-full p-4 h-full bg-pink-200 object-cover" @mouseover="mouserOver()"
+    @mouseout="mouserOut()">
+    item {{ item }}
+  </li>
 </template>
 
 <script>
@@ -35,19 +34,17 @@ export default {
     }
   },
   methods: {
+    //鼠标移入 设置边框位置 宽度 高度
     mouserOver() {
-      console.log("this.$refs===", this.$refs.liRef);
       this.$emit("setHovered", true);
       const { offsetLeft, offsetTop, clientWidth, clientHeight } = this.$refs.liRef;
-      console.log("offsetLeft", offsetLeft);
-
       this.$emit("setLeft", offsetLeft);
       this.$emit("setTop", offsetTop);
       this.$emit("setWidth", clientWidth);
       this.$emit("setHeight", clientHeight);
     },
+    //鼠标移出隐藏边框 记录当前位置
     mouserOut() {
-      console.log("this.$refs---", this.$refs.liRef);
       this.$emit("setHovered", false);
       const { offsetLeft, offsetTop } = this.$refs.liRef;
       this.$emit("setLeft", offsetLeft);
