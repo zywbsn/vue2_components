@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full text-center">
+  <div class="w-full h-full text-center bg-black text-white pt-8">
     <h1>单行（完成）</h1>
     <div class="text-white p-8">
-      <ul class="flex gap-4 text-3xl bg-gray-500  relative rounded-lg">
-        <li v-for="(item, index) in list" :key="index" @mouseenter="setCurrent(index)"
+      <ul class="flex gap-4 text-3xl bg-gray-500  relative rounded-lg" @mouseleave="mouseLeave">
+        <li v-for="(item, index) in list" :key="index" @mouseenter="setCurrent(index)" @click="onCurrent(index)"
           class="w-full h-16 relative cursor-pointer">
           <div class="absolute z-20 inset-0 grid place-content-center text-green-200">{{ item }}</div>
         </li>
@@ -35,6 +35,7 @@ export default {
       /** 单行 */
       list: ["HTML", "CSS", "JavaScript", "Vue", "React", "Angular"],
       current: 0,
+      oldCurrent: 0,
       /** end */
 
       /** 多行 */
@@ -56,8 +57,17 @@ export default {
   },
   methods: {
     /** 单行 */
+    //鼠标移入
     setCurrent(val) {
       this.current = val;
+    },
+    //点击
+    onCurrent(val) {
+      this.oldCurrent = val;
+    },
+    //鼠标移出 如果没有点击当前 tab 则复原
+    mouseLeave() {
+      this.current = this.oldCurrent;
     },
     /** end */
 
