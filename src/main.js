@@ -4,6 +4,7 @@ import router from "./router";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "./index.css";
+import "tailwindcss/tailwind.css";
 import antiShake from "@/directive/antiShake"; //引入防抖自定义指令
 import { message } from "@/utils/message";
 

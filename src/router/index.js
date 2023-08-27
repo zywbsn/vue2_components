@@ -53,6 +53,15 @@ const routes = [
         },
         component: () => import("@/views/w_comps/resourceSelector/index.vue"),
       },
+      {
+        path: "tabs_animations",
+        name: "tabs_animations",
+        meta: {
+          isShow: true,
+          title: "导航条动画",
+        },
+        component: () => import("@/views/w_comps/tabsAnimations/index.vue"),
+      },
     ],
   },
 ];

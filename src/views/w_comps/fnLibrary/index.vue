@@ -52,7 +52,13 @@ export default {
   methods: {
     //十六进制颜色转 rgb 或 rgba
     changeRgb() {
-      console.log(this.color);
+      if (!this.color.color) {
+        this.$msg({
+          type: "error",
+          message: '请输入要转化的颜色'
+        });
+        return;
+      }
       const { color, opacity } = this.color;
       this.color.result = toRgb(color, opacity);
     },
@@ -60,11 +66,12 @@ export default {
     submitForm() {
       this.sub.submitFormCount++;
     },
+    //修改后的 el-message
     onMsg() {
       this.$msg({
         type: "success",
         message: '更改后 el-message'
-      })
+      });
     }
   }
 }
